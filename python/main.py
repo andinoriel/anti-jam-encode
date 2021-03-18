@@ -17,7 +17,7 @@ def task_1(k, t):
     print(c, "бод")
 
 
-def task_2(p, i, c1, c0, q, bits, n=1):
+def task_2(p, i, c0, c1, q, bits, n=1):
     vu = bits / n
     results = binom_halfs(p, q, n)
     a, b = sum(results[:len(results)//2]), sum(results[len(results)//2:])
@@ -36,7 +36,7 @@ def task_2(p, i, c1, c0, q, bits, n=1):
     }
 
 
-def task_2_bit(p, i, c1, c0, q, bits, parity_bit):
+def task_2_bit(p, i, c0, c1, q, bits, parity_bit):
     coeff = parity_bit/(parity_bit+1)
     vu = bits * coeff
     r = binom_halfs(p, q, 5)
@@ -65,9 +65,9 @@ def main():
     c0 = 2
     bits = 10 ** 9
     parity_bit = 4
-    res_1 = task_2(p, i, c1, c0, q, bits, n=1)
-    res_3 = task_2(p, i, c1, c0, q, bits, n=3)
-    res_5 = task_2(p, i, c1, c0, q, bits, n=5)
+    res_1 = task_2(p, i, c0, c1, q, bits, n=1)
+    res_3 = task_2(p, i, c0, c1, q, bits, n=3)
+    res_5 = task_2(p, i, c0, c1, q, bits, n=5)
     res_bit = task_2_bit(p, i, c1, c0, q, bits, parity_bit)
     print("-"*101)
     print(f"| {'Параметр':10}| {'При однократном':20}| {'При трехкратном':20}| {'При пятикратном':20}| {'При бите четности':20}|")
