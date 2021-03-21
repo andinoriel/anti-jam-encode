@@ -26,6 +26,23 @@ $ cargo run --release
 $ python main.py
 ```
 
+### Dart
+
+#### Run
+
+```
+$ cd dart/hash_trash
+$ dart run
+```
+
+#### Build
+
+```
+$ cd dart/hash_trash
+$ dart compile exe bin/hash_trash.dart
+$ bin/hash_trash.exe
+```
+
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
@@ -34,3 +51,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 * [andinoriel](https://github.com/Andinoriel) - Rust
 * [HanGerrel](https://github.com/HanGerrel) - Python
+* [IceArrow256](https://github.com/IceArrow256) - Dart
